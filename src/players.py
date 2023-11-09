@@ -21,7 +21,7 @@ class Player:
 
         :param: Использованное слово
         """
-        if not self.get_check_uniq_word:
+        if not self.get_check_uniq_word(word):
             self.subwords.append(word)
 
     def get_check_uniq_word(self, word: str) -> bool:
