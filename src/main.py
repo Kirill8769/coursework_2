@@ -4,6 +4,11 @@ from players import Player
 
 
 def play_game(basic_word: BasicWord) -> None:
+    """
+    Функция запускает игру и взаимодействует с пользователем.
+
+    :param basic_word: Объект класса, представляющий основное слово для игры и правильные ответы
+    """
     print("Программа: Ввведите имя игрока")
     user_name = input("Пользователь: ")
     print("---")
@@ -35,6 +40,9 @@ def play_game(basic_word: BasicWord) -> None:
 
 
 def main() -> None:
+    """
+    Основная функция, которая инициализирует игру и вызывает функцию play_game.
+    """
     basic_word = utils.load_random_word()
     play_game(basic_word)
 
