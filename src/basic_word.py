@@ -1,11 +1,10 @@
 class BasicWord:
-
     def __init__(self, word: str, subwords: list[str]):
         self.word = word
         self.subwords = subwords
 
-    def __repr__(self):
-        pass
+    def __repr__(self) -> str:
+        return f"question word: {self.word}\nsubwords: {self.subwords}"
 
     def get_check_subword(self, subword: str) -> bool:
         """
@@ -24,5 +23,3 @@ class BasicWord:
         :return: Количество подслов
         """
         return len(self.subwords)
-
-

@@ -1,11 +1,10 @@
 class Player:
-
     def __init__(self, name: str, subwords: list[str]):
         self.name = name
         self.subwords = subwords
 
-    def __repr__(self):
-        pass
+    def __repr__(self) -> str:
+        return f"name: {self.name}\nused_subwords: {self.subwords}"
 
     def get_count_used_words(self) -> int:
         """
@@ -15,11 +14,11 @@ class Player:
         """
         return len(self.subwords)
 
-    def add_word(self, word: str):
+    def add_word(self, word: str) -> None:
         """
         Добавляет слово в список использованных слов
 
-        :param: Использованное слово
+        :param word: Использованное слово
         """
         if not self.get_check_uniq_word(word):
             self.subwords.append(word)
@@ -28,7 +27,7 @@ class Player:
         """
         Проверяет было ли использовано данное слово до этого
 
-        :param: Слово для проверки
+        :param word: Слово для проверки
 
         :return: Результат проверки
         """
